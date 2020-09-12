@@ -1102,7 +1102,7 @@ Custom property | Description
 
       //account for X axis
       if(this.xAxisLocation === 'bottom') {
-        newMarg.bottom -= 40;
+        newMarg.bottom -= (this.xAxisConfig && this.xAxisConfig.title.trim().length > 0) ? 40 : 15;
       } else if(this.xAxisLocation === 'top') {
         newMarg.top -= 40;
       }
